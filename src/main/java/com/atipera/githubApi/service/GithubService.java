@@ -102,7 +102,7 @@ public class GithubService {
         } catch (WebClientResponseException e) {
             log.error("Error fetching branches for repo {}: {}", nameOfRepo, e.getMessage());
             if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-                throw new NotFoundException("User '" + userLogin + "' or repository '" + nameOfRepo + "' does not exist");
+                throw new NotFoundException("User" + userLogin + " or repository " + nameOfRepo + " does not exist");
             }
             throw e;
         }

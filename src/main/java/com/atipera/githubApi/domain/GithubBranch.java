@@ -18,7 +18,6 @@ public class GithubBranch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotNull(message = "Branch name must not be null")
     private String name;
     @NotNull(message = "Commit details must not be null")
